@@ -12,50 +12,172 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body {
-            height: 100vh;
-        }
         
         h1 {
-            background-color: rgb(97, 117, 209);
+            background-color: #6175d1;
         }
         .main-div {
+            margin: 0 auto;
+            margin-top: 50px;
             box-shadow: 5px 5px 20px 1px whitesmoke;
         }
         .add-todo-button {
             background-color: #f8b73d;
         }
-        li {
-            display: inline;
-        }
-        ol {
-            width: 100% !important;
-        }
-        .list-main-div {
-            border: 1px solid blue;
-            width: 100% !important;
-
-        }
         .p-div {
-            border: 1px solid red;
+            overflow-wrap: break-word;
         }
-        p {
+        .delete-button {
+            background-color: #ee0d0d;
+        }
+        .edit-button {
+            background-color: #0e920e;
+        }
         
-        }
-        .button-div {
-            border: 1px solid green;
+        @media (max-width: 1120px) {
+            .main-div {
+                width: 65% !important;
+            }
         }
 
+        @media (max-width: 800px) {
+            .main-div {
+                width: 80% !important;
+            }
+        }
+
+        
+        @media (max-width: 650px) {
+            .main-div {
+                width: 85% !important;
+            }
+        }
+
+        
+        @media (max-width: 600px) {
+            input {
+                width: 65% !important;
+                font-size: 1rem !important;
+            }
+            .add-todo-button {
+                width: 35% !important;
+            }
+            .p-div {
+                width: 65% !important;
+            }
+            .button-div {
+                width: 35% !important;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .main-div {
+                width: 85% !important;
+            }
+            
+            input {
+                width: 75% !important;
+                font-size: 0.75rem !important;
+            }
+            .add-todo-button {
+                width: 25% !important;
+                font-size: 0.75rem !important;
+            }
+            .p-div {
+                width: 75% !important;
+            }
+            .button-div {
+                width: 25% !important;
+                column-gap: 2px !important;
+            }
+            .p-div > p {
+                font-size: 0.75rem !important;
+            }
+            .delete-button {
+                font-size: 0.75rem !important;
+            }
+            .edit-button {
+                font-size: 0.75rem !important;
+            }
+        }
+
+        @media (max-width: 425px) {
+            .main-div {
+                row-gap: 10px !important;
+            }
+            .input-main-div {
+                column-gap: 5px !important;
+            }
+            input {
+                width: 75% !important;
+                font-size: 0.75rem !important;
+            }
+            .add-todo-button {
+                width: 25% !important;
+                font-size: 0.75rem !important;
+            }
+            .list-main-div {
+                column-gap: 10px !important;
+            }
+            .p-div {
+                width: 70% !important;
+            }
+            .button-div {
+                width: 30% !important;
+                column-gap: 2px !important;
+            }
+        }
+
+
+        @media (max-width: 400px) {
+            input {
+                width: 70% !important;
+                font-size: 0.75rem !important;
+            }
+            .add-todo-button {
+                width: 30% !important;
+                font-size: 0.75rem !important;
+            }
+            .p-div {
+                width: 65% !important;
+            }
+            .button-div {
+                width: 35% !important;
+                column-gap: 2px !important;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .main-div {
+                padding: 15px !important;
+                margin-top: 20px !important;
+            }
+            input {
+                width: 70% !important;
+                font-size: 0.75rem !important;
+            }
+            .add-todo-button {
+                width: 30% !important;
+                font-size: 0.75rem !important;
+            }
+            .p-div {
+                width: 60% !important;
+            }
+            .button-div {
+                width: 40% !important;
+                column-gap: 2px !important;
+            }
+        }
     </style>
 
 </head>
-<body class="bg-dark d-flex justify-content-center align-items-center">
+<body class="bg-dark">
     
     <div class="main-div bg-light border d-flex flex-column p-4 row-gap-4 w-50 rounded">
         
         <h1 class="text-center text-white rounded"> TODO APP </h1>
     
-        <div class="d-flex justify-content-center column-gap-3">
+        <div class="input-main-div d-flex justify-content-center column-gap-3">
             <input type="text" placeholder="Enter Todo" class="text-start ps-2 w-75 border rounded" id="input">
             <button onclick="addTodo()" class="w-25 border text-white bg-gradient pt-2 pb-2 fs-5 add-todo-button rounded">Add Todo</button>
         </div>
